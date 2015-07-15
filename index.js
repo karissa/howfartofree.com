@@ -3,17 +3,28 @@ var files = [
   audio.create('/sounds/duet1.mp3'),
   audio.create('/sounds/duet2.mp3'),
   audio.create('/sounds/duet3.mp3'),
-  audio.create('/sounds/duet4.mp3')
+  audio.create('/sounds/duet4.mp3'),
+  audio.create('/sounds/duet5.mp3'),
+  audio.create('/sounds/duet6.mp3'),
+  audio.create('/sounds/duet7.mp3'),
+  audio.create('/sounds/duet8.mp3'),
+  audio.create('/sounds/duet9.mp3'),
+  audio.create('/sounds/duet10.mp3'),
+  audio.create('/sounds/duet11.mp3')
 ]
 
 function playRandomSound () {
-  var sound = files[Math.floor(Math.random() * 4)]
-  sound.play()
-  var next = (sound.duration + Math.floor(Math.random() * 8)) * 1000
-  console.log(next + 'ms to free')
-  setTimeout(playRandomSound, next)
+  var sound = files[Math.floor(Math.random() * files.length)]
+  if (Math.random() > .6) {
+    sound.play()
+    console.log(sound.duration + ' seconds to free')
+  }
 }
 
-audio.whenLoaded(files, function () {
-  playRandomSound()
-})
+var as = document.querySelectorAll('a')
+for (i in as) {
+  as[i].onclick = function (event) {
+    event.preventDefault()
+    playRandomSound()
+  }
+}
