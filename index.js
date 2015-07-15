@@ -28,3 +28,12 @@ for (i in as) {
     playRandomSound()
   }
 }
+
+
+function loop () {
+  audio.whenLoaded(files, function () {
+    var timeout = 4000 + (Math.random() * 10 * 1000)
+    setTimeout(playRandomSound, timeout)
+  })
+}
+loop()
