@@ -15,7 +15,7 @@ var files = [
 
 function playRandomSound () {
   var sound = files[Math.floor(Math.random() * files.length)]
-  if (Math.random() > .6) {
+  if (Math.random() > .4) {
     sound.play()
     console.log(sound.duration + ' seconds to free')
   }
