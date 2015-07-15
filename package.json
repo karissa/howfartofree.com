@@ -1,0 +1,33 @@
+{
+  "name": "howfartofree.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o bundle.js",
+    "deploy": "gh-pages-deploy"
+  },
+  "gh-pages-deploy": {
+    "prep": [
+      "build"
+    ],
+    "noprompt": "false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karissa/howfartofree.com.git"
+  },
+  "author": "Karissa McKelvey <karissa@karissamck.com> (http://karissamck.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karissa/howfartofree.com/issues"
+  },
+  "homepage": "https://github.com/karissa/howfartofree.com",
+  "dependencies": {
+    "browser-audio": "^1.0.2",
+    "gh-pages-deploy": "^0.3.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.6"
+  }
+}
