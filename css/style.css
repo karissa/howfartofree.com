@@ -1,10 +1,18 @@
 body {
   background-color: #444;
-  text-transform: uppercase;
-  color: white;
+  color: #ddd;
 }
-h1, h2, h3, h4, h5, h6, h7 {
+h1, h2, h3, h4 .navbar {
   font-family: 'Lato', sans-serif !important;
+}
+h4 {
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.navbar {
+  font-size: 18px;
 }
 .row {
   max-width: 100%;
@@ -16,19 +24,40 @@ blockquote {
   border-left-color: #6B2D4A;
   font-style: italic;
 }
+.byline {
+  padding: 50px;
+}
+.header-text {
+  line-height: 80px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.col-md-6 {
+  padding: 0px;
+}
+.floating {
+  padding: 50px;
+}
 .pull-right {
   top: 0;
   right: 0;
   position: absolute;
 }
-
+.video-right {
+  padding-left: 30px;
+}
+.floating h1 {
+  margin-bottom: 44px;
+}
 .logo {
-  margin-top: 20px;
-  padding: 50px;
+  height: 50%;
 }
 
 .logo-container {
+  padding: 100px;
   background-color: white;
+  color: #301421;
 }
 
 .logo h5 {
@@ -39,9 +68,8 @@ blockquote {
   margin-top: 20px;
   position: relative;
 }
-.byline {
+.purple {
   background-color: #6B2D4A;
-  padding: 100px;
 }
 
 .video-container {
@@ -68,6 +96,7 @@ blockquote {
 }
 .footer, .push {
     height: 155px; /* .push must be the same height as .footer */
+    padding: 20px;
 }
 .centered {
   text-align: center;
