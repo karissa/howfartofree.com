@@ -101,3 +101,26 @@ blockquote {
 .centered {
   text-align: center;
 }
+
+@media only screen and (max-width: 768px) {
+  .byline {
+    padding: 0px 0px;
+  }
+  .logo-container {
+    padding: 5px;
+  }
+  .video-right {
+    padding: 0px 10px 50px 10px;
+  }
+  .floating {
+    padding: 0px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .floating h1 {
+    margin-bottom: 44px;
+    margin-top: 44px;
+    font-size: 30px;
+  }
+}
